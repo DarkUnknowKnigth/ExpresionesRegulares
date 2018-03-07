@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/freson.css">
+</head>
+<body>
+    <nav class="nav">
+        <h2 id="titulo">Evaluador de expresiones regulares</h2>
+    </nav>
+    <div class="container-fluid">
+        <div class="cuadro container">
+            <div>
+                <label class="h2" id="subtitulo"> 
+                    Problemas:
+                </label>
+                <select class="form-control" id="hojas">
+                        <option value="-" selected>Seleccione una hoja de ejercicios</option>
+                        <option value="1">Hoja 1</option>
+                        <option value="2">Hoja 2</option>
+                        <option value="3">Hoja 3</option>
+                        <option value="4">Hoja 4</option>
+                </select>
+                <select class="form-control" name="combo" id="opciones">
+                    <option value="-" selected>Seleccione un problema</option>
+                    <option value="1">Problema 1 (a|b)+(abba)</option>
+                    <option value="2">Problema 2 (a|b)(a|b)(a|b)b(a|b)*</option>
+                    <option value="3">Problema 3 (a|b)(a|b)(a|b)(a|b)(a|b)</option>
+                    <option value="4">Problema 4 a+b(bb)*</option>
+                    <option value="5">Problema 5 b*(ab|ba)b*</option>
+                    <option value="6">Problema 6 a*b+</option>
+                    <option value="7">Problema 7 (a/e/i/o/u)+</option>
+                    <option value="8">Problema 8 Ab*A</option>
+                    <option value="9">Problema 9 (a*/b*)</option>
+                    <option value="10">Problema 10 (a/b)*bab(a/b)*</option>
+                </select>
+                <select class="form-control" name="combo" id="opciones1">
+                    <option value="-" selected>Seleccione un problema</option>
+                    <option value="1">Problema 1 (abba)(a|b)+</option>
+                    <option value="2">Problema 2 (a|b)(a|b)(a|b)(a|b)b(a|b)*</option>
+                    <option value="3">Problema 3 (a|b)(a|b)(a|b)(a|b)(a|b)(a|b)*</option>
+                    <option value="4">Problema 4 a*(bb)+</option>
+                    <option value="5">Problema 5 a*(ac|ca)a*</option>
+                    <option value="6">Problema 6 a*b+</option>
+                    <option value="7">Problema 7 (1/2/3/4/5/6/7/8/9/0/1)+</option>
+                    <option value="8">Problema 8 ab*a</option>
+                    <option value="9">Problema 9 (a*/b*)</option>
+                    <option value="10">Problema 10 (a/b)*bab(a/b)*</option>
+                </select>
+                <select class="form-control" name="combo" id="opciones2">
+                    <option value="-" selected>Seleccione un problema</option>
+                    <option value="1">Problema 1 (a|b)+(aa)</option>
+                    <option value="2">Problema 2 (ab)+(a/λ)/(ba)+(b/λ)</option>
+                    <option value="3">Problema 3 a(aa)*cb(bb)*</option>
+                    <!-- <option value="4">Problema 4</option>
+                    <option value="5">Problema 5</option>
+                    <option value="6">Problema 6</option> -->
+                </select>
+                <select class="form-control" name="combo" id="opciones3">
+                    <option value="-" selected>Seleccione un problema</option>
+                    <option value="1">Problema 1 (a|b)+(aa)</option>
+                    <option value="2">Problema 2 (ab)+(a/λ)/(ba)+(b/λ)</option>
+                </select>
+            </div>
+            <div class="row" id="display">
+                <div class="col-md">
+                    <h4>Enunciado:</h4>
+                    <span id="problema"></span>
+                </div>
+                <div class="col-sm bg-warning" id="exp">
+                    <h4>Expresion Regular:</h4>
+                    <span class="h6" id="expresion"></span>
+                </div>
+                <div class="col-sm bg-primary" id="evaluacion">
+                    <h4>Evaluacion:</h4>
+                    <span id="respuesta"></span>
+                    <input class="form-control" type="text" placeholder="ingrese una cadena" id="texto">
+                    <!-- <button class="btn btn-primary" id="boton">Validar</button> -->
+                </div>
+            </div>                   
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/evaluador.js"></script>
+</body>
+</html>
