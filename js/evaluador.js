@@ -11,7 +11,7 @@ var Problema = function(oracion,expresion){
 function p1(cadena) 
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     for(var i=0;i<cadena.length;i++)
     {
         if(cadena[i]=='a'|| cadena[i]=='b')
@@ -24,7 +24,7 @@ function p1(cadena)
             {
                 if(i>cadena.length-5 && cadena[cadena.length-4]=='a' && cadena[cadena.length-3]=='b' && cadena[cadena.length-2]=='b' && cadena[cadena.length-1]=='a')
                 {
-                    console.log(cadena[i]+cadena[i+1]+cadena[i+2]+cadena[i+3]);
+                    // console.log(cadena[i]+cadena[i+1]+cadena[i+2]+cadena[i+3]);
                     resp.r=true;
                     return resp;
                 }
@@ -46,7 +46,7 @@ function p1(cadena)
 function p2(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>=4){
         for(var i=0;i<cadena.length;i++)
         {
@@ -82,7 +82,7 @@ function p2(cadena)
 }
 function p3(cadena){
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if (cadena.length==5) 
     {
         for (let i = 0; i < cadena.length; i++) 
@@ -111,7 +111,7 @@ function p3(cadena){
 function p4(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     contab=0;;
     if(cadena.length>1)
     {
@@ -160,7 +160,7 @@ function p4(cadena)
 function p5(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>1)
     {
         if(tiene(cadena,'a') && tiene(cadena,'b'))
@@ -208,23 +208,23 @@ function p5(cadena)
 function p6(cadena)//pendiente
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>0)
     {
         if(tiene(cadena,'b'))
         {
 
-            console.log("DOnde pierde en a: "+pierde_secuencia(cadena,'a',0));
+            // console.log("DOnde pierde en a: "+pierde_secuencia(cadena,'a',0));
             if(cadena[(pierde_secuencia(cadena,'a',0)+1)]=='b' || cadena[(pierde_secuencia(cadena,'a',0))]=='b'){
                 if(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)+1))+1==cadena.length)
                 {
-                    console.log(cadena);
+                    // console.log(cadena);
                     resp.r=true;
                     return resp; 
                 }
                 else
                 {
-                    console.log(cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)))+1)]);
+                    // console.log(cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)))+1)]);
                     resp.error="un caracter invalido en la posicion: "+((pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0))))+2)+" caracter: "+cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0))))+1];
                     resp.r=false;
                     return resp;    
@@ -253,7 +253,7 @@ function p6(cadena)//pendiente
 }
 function p7(cadena){
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if ((tiene(cadena,'a') || tiene(cadena,'e') || tiene(cadena,'i') || tiene(cadena,'o') || tiene(cadena,'u')) && cadena.length>0) {
         for (let i = 0; i < cadena.length; i++) {
             if(cadena[i]=='a' || cadena[i]=='e' || cadena[i]=='i' || cadena[i]=='o' || cadena[i]=='u')
@@ -394,7 +394,7 @@ function p1_1(cadena)
 function p1_2(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>=5){
         for(var i=0;i<cadena.length;i++)
         {
@@ -431,7 +431,7 @@ function p1_2(cadena)
 function p1_3(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if (cadena.length>=5) 
     {
         for (let i = 0; i < cadena.length; i++) 
@@ -460,19 +460,19 @@ function p1_3(cadena)
 function p1_4(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>0)
     {
         if(tiene(cadena,'b'))
         {
 
-            console.log("DOnde pierde en a: "+pierde_secuencia(cadena,'a',0));
+            // console.log("DOnde pierde en a: "+pierde_secuencia(cadena,'a',0));
             if(cadena[(pierde_secuencia(cadena,'a',0)+1)]=='b'){
                 if(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)+1))+1==cadena.length )
                 {
                     if(numerodeveces(cadena,'b')%2==0)
                     {
-                        console.log(cadena);
+                        // console.log(cadena);
                         resp.r=true;
                         return resp;
                     } 
@@ -484,7 +484,7 @@ function p1_4(cadena)
                 }
                 else
                 {
-                    console.log(cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)))+1)]);
+                    // console.log(cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0)))+1)]);
                     resp.error="un caracter invalido en la posicion: "+((pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0))))+1)+" caracter: "+cadena[(pierde_secuencia(cadena,'b',(pierde_secuencia(cadena,'a',0))))+1];
                     resp.r=false;
                     return resp;    
@@ -514,7 +514,7 @@ function p1_4(cadena)
 function p1_5(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if(cadena.length>1)
     {
         if(tiene(cadena,'a') && tiene(cadena,'c'))
@@ -562,7 +562,7 @@ function p1_5(cadena)
 function p1_7(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     if ((tiene(cadena,'1')|| tiene(cadena,'0') || tiene(cadena,'2') || tiene(cadena,'3') || tiene(cadena,'4')  || tiene(cadena,'5')|| tiene(cadena,'6')|| tiene(cadena,'7')|| tiene(cadena,'8')|| tiene(cadena,'9')) && cadena.length>0) {
         for (let i = 0; i < cadena.length; i++) {
             if(cadena[i]=='1' || cadena[i]=='2' || cadena[i]=='3' || cadena[i]=='4' || cadena[i]=='5' || cadena[i]=='6' || cadena[i]=='7' || cadena[i]=='8' || cadena[i]=='9' || cadena[i]=='0')
@@ -589,7 +589,7 @@ function p1_7(cadena)
 function p2_1(cadena)
 {
     resp={error:":)", r:false};
-    console.log(cadena);
+    // console.log(cadena);
     for(var i=0;i<cadena.length;i++)
     {
         if(cadena[i]=='a'|| cadena[i]=='b')
@@ -602,7 +602,7 @@ function p2_1(cadena)
             {
                 if(i>cadena.length-3 && cadena[cadena.length-2]=='a' && cadena[cadena.length-1]=='a')
                 {
-                    console.log(cadena[i]+cadena[i+1]);
+                    // console.log(cadena[i]+cadena[i+1]);
                     resp.r=true;
                     return resp;
                 }
@@ -694,6 +694,91 @@ function p2_3(cadena)
     }
 }
 //////////////////funciones hoja 2/2
+function p_23(cadena)
+{
+    resp={error:":)", r:false};
+    if(cadena[cadena.length-2]=='b' && cadena.length>1)
+    {
+        for (let i = 0; i < cadena.length; i++) 
+        {
+            if (cadena[i]=='a' || cadena[i]=='b') 
+            {
+                
+            }
+            else
+            {
+                resp.error="un caracter invalido en la posicion: "+(i+1)+" caracter: "+cadena[i];
+                resp.r=false;
+                return resp;
+            }   
+        }
+        resp.r=true;
+        return resp;
+    }
+    else{
+        resp.error="no hay una b en la penultima posicion";
+        resp.r=false;
+        return resp;
+    }
+}
+function p_24(cadena) 
+{ 
+    resp={r:false,error:":)"};
+    
+    if (cadena.length%2==0 && cadena.length>=2) 
+    {
+        for (let i = 0; i <cadena.length; i++) 
+        {
+            if(cadena[i]=='a' || cadena[i]=='b')
+            {
+            }
+        
+            else
+            {
+                resp.error="un caracter invalido en la posicion: "+(i+1)+" caracter: "+cadena[i];
+                resp.r=false;
+                return resp;
+            }
+        }
+        resp.r=true;
+        return resp;
+    }
+    else
+    {
+        resp.error="la cadena no es par";
+        resp.r=false;
+        return resp;
+    }
+}
+function p_25(cadena)
+{
+    resp={error:":)", r:false};
+    if(hay(cadena,"aba"))
+    {
+        for (let i = 0; i < cadena.length; i++) 
+        {
+            if(cadena[i]=='a' || cadena[i]=='b')
+            {
+
+            }
+            else
+            { 
+                resp.error="un caracter invalido en la posicion: "+(i+1)+" caracter: "+cadena[i];
+                resp.r=false;
+                return resp;
+            }                  
+        }
+        resp.r=true;
+        return resp;
+    }
+    else
+    {
+        resp.error="la cadena debe contener aba";
+        resp.r=false;
+        return resp;
+    }
+}
+   
 
 //funciones de apoyo
 
@@ -711,7 +796,7 @@ function pierde_secuencia(cadena,letra,posicion)
     let pos=0;
     for (let i = posicion; i < cadena.length; i++) {
         if(cadena[i]==letra){
-            //console.log(cadena[i]);
+            // console.log(cadena[i]);
             pos=i;
         }
         else
@@ -747,9 +832,9 @@ function numerodeveces(cadena, caracter){
 //main 
 $(document).ready(function(){
     $("#hojas").change(()=>{
-        console.log("entro");
+        // console.log("entro");
         var index= $("#hojas option:selected").val();
-        console.log(index);
+        // console.log(index);
         switch(index){
             case '1':
                 $("#opciones").css("display","block");
@@ -783,9 +868,9 @@ $(document).ready(function(){
     //cuando cambia la hoja
     //hoja 1
     $("#opciones").change(()=>{
-        console.log("entro");
+        // console.log("entro");
         var index= $("#opciones option:selected").val();
-        console.log(index);
+        // console.log(index);
         switch(index){
             case '1':
                 var v1= new Problema("Cualquier secuencia de a's o de b's siempre que termine con <b>abba</b>","(a|b)+(abba)");
@@ -825,7 +910,7 @@ $(document).ready(function(){
     //hoja 2
     $("#opciones1").change(()=>{
         var index= $("#opciones1 option:selected").val();
-        console.log(index);
+        // console.log(index);
         switch(index)
         {
             case '1':
@@ -865,9 +950,9 @@ $(document).ready(function(){
     }); 
     //hoja 3
     $("#opciones2").change(()=>{
-        console.log("entro");
+        // console.log("entro");
         var index= $("#opciones2 option:selected").val();
-        console.log(index);
+        // console.log(index);
         switch(index){
             case '1':
                 var v1= new Problema("Cualquier secuencia de a's o de b's siempre que termine con <b>aa</b>","(a|b)+(aa)");
@@ -884,9 +969,9 @@ $(document).ready(function(){
         } 
     });
     $("#opciones3").change(()=>{
-        console.log("entro");
+        // console.log("entro");
         var index= $("#opciones3 option:selected").val();
-        console.log(index);
+        // console.log(index);
         switch(index){
             case '1':
                 var v1= new Problema("Cualquier secuencia de a's o de b's siempre que termine con <b>aa</b>","(a|b)+(aa)");
@@ -895,7 +980,13 @@ $(document).ready(function(){
                 var v1= new Problema("Cualquier secuencia de a's o de b's siempre que no haya dos <b>a´s</b> o dos <b>b´s</b>","(ab)+(a/λ)/(ba)+(b/λ)");
                 break;
             case '3':
-                var v1= new Problema("Cualquier secuencia de a's o de b's siempre que el penultimo caracter sea <b>b</b>","a(aa)*cb(bb)*");
+                var v1= new Problema("Cualquier secuencia de a's o de b's siempre que el penultimo caracter sea <b>b</b>","(a/b)*b(a/b)+");
+                break;
+            case '4':
+                var v1= new Problema("Cualquier secuencia de a's o de b's siempre que el numero total de caracteres <b>sea par</b>","(aa|bb|ab|ba)+");
+                break;
+            case '5':
+                var v1= new Problema("Cualquier secuencia de a's o de b's siempre que incluya la subcadena aba","(a/b)*aba(a/b)*");
                 break;
             default:
                 alert("Porfavor seleccione un problema");
@@ -920,7 +1011,7 @@ function m() {
             {
                 case '1':
                     resp=p1($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -933,7 +1024,7 @@ function m() {
                 break;
                 case '2':
                     resp=p2($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -946,7 +1037,7 @@ function m() {
                 break;
                 case '3':
                     resp=p3($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -959,7 +1050,7 @@ function m() {
                 break;
                 case '4':
                     resp=p4($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -972,7 +1063,7 @@ function m() {
                 break;
                 case '5':
                     resp=p5($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -985,7 +1076,7 @@ function m() {
                 break;
                 case '6':
                     resp=p6($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -998,7 +1089,7 @@ function m() {
                 break;
                 case '7':
                     resp=p7($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1011,7 +1102,7 @@ function m() {
                 break;
                 case '8':
                     resp=p8($("#texto").val(),'A');
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1024,7 +1115,7 @@ function m() {
                 break;
                 case '9':
                     resp=p9($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1037,7 +1128,7 @@ function m() {
                 break;
                 case '10':
                     resp=p10($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1059,7 +1150,7 @@ function m() {
             {
                 case '1':
                     resp=p1_1($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1072,7 +1163,7 @@ function m() {
                 break;
                 case '2':
                     resp=p1_2($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1085,7 +1176,7 @@ function m() {
                 break;
                 case '3':
                     resp=p1_3($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1098,7 +1189,7 @@ function m() {
                 break;
                 case '4':
                     resp=p1_4($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1111,7 +1202,7 @@ function m() {
                 break;
                 case '5':
                     resp=p1_5($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1124,7 +1215,7 @@ function m() {
                 break;
                 case '6':
                     resp=p6($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1137,7 +1228,7 @@ function m() {
                 break;
                 case '7':
                     resp=p1_7($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1150,7 +1241,7 @@ function m() {
                 break;
                 case '8':
                     resp=p8($("#texto").val(),'a');
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1163,7 +1254,7 @@ function m() {
                 break;
                 case '9':
                     resp=p9($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1176,7 +1267,7 @@ function m() {
                 break;
                 case '10':
                     resp=p10($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1198,7 +1289,7 @@ function m() {
             {
                 case '1':
                     resp=p2_1($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1211,7 +1302,7 @@ function m() {
                 break;
                 case '2':
                     resp=p2_2($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1224,7 +1315,7 @@ function m() {
                 break;
                 case '3':
                     resp=p2_3($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1246,7 +1337,7 @@ function m() {
             {
                 case '1':
                     resp=p2_1($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
@@ -1259,7 +1350,46 @@ function m() {
                 break;
                 case '2':
                     resp=p2_2($("#texto").val());
-                    console.log(resp);
+                    // console.log(resp);
+                    if(resp.r){
+                        $("#respuesta").text("cadena valida");
+                        $("#evaluacion").addClass("bg-success");
+                        $("#evaluacion").removeClass("bg-danger");
+                    }
+                    else{
+                        $("#respuesta").text("cadena invalida: "+resp.error);
+                        $("#evaluacion").addClass("bg-danger");
+                    }
+                break;
+                case '3':
+                    resp=p_23($("#texto").val());
+                    // console.log(resp);
+                    if(resp.r){
+                        $("#respuesta").text("cadena valida");
+                        $("#evaluacion").addClass("bg-success");
+                        $("#evaluacion").removeClass("bg-danger");
+                    }
+                    else{
+                        $("#respuesta").text("cadena invalida: "+resp.error);
+                        $("#evaluacion").addClass("bg-danger");
+                    }
+                break;
+                case '4':
+                    resp=p_24($("#texto").val());
+                    // console.log(resp);
+                    if(resp.r){
+                        $("#respuesta").text("cadena valida");
+                        $("#evaluacion").addClass("bg-success");
+                        $("#evaluacion").removeClass("bg-danger");
+                    }
+                    else{
+                        $("#respuesta").text("cadena invalida: "+resp.error);
+                        $("#evaluacion").addClass("bg-danger");
+                    }
+                break;
+                case '5':
+                    resp=p_25($("#texto").val());
+                    // console.log(resp);
                     if(resp.r){
                         $("#respuesta").text("cadena valida");
                         $("#evaluacion").addClass("bg-success");
